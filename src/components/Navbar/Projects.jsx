@@ -11,10 +11,10 @@ const projects = [
     },
     {
         id: 2,
-        title: "SportsHeaven - Sports Equipment Store",
-        description: "An e-commerce store for sports accessories with Firebase authentication and animated UI.",
-        image: "https://i.ibb.co/YTL96gyy/image.png",
-        liveLink: "https://sports-heaven.web.app",
+        title: "Food Kingdom - Restaurant Website",
+        description: "Food Kingdom is a comprehensive Restaurant Management website designed to enhance your dining experience and streamline restaurant operations. Built using the MERN stack, this platform offers a user-friendly interface for customers and staff alike.",
+        image: "https://i.ibb.co.com/bj7XkZHy/image.png",
+        liveLink: "https://restaurant-project-virid.vercel.app",
         repoLink: "#"
     },
     {
