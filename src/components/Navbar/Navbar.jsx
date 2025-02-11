@@ -26,7 +26,7 @@ const Navbar = () => {
             animate={{ y: 0 }}
             onScroll={handleScroll}
         >
-            <div className="container mx-auto px-6 py-6 flex justify-between items-center">
+            <div className="container mx-auto px-6 md:px-12 py-6 flex justify-between items-center">
                 <div className="text-2xl flex items-center gap-x-2 font-bold">
                     <motion.img
                         className="rounded-sm cursor-pointer"

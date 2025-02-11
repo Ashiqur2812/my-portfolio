@@ -15,7 +15,7 @@ const projects = [
         description: "Food Kingdom is a comprehensive Restaurant Management website designed to enhance your dining experience and streamline restaurant operations. Built using the MERN stack, this platform offers a user-friendly interface for customers and staff alike.",
         image: "https://i.ibb.co.com/bj7XkZHy/image.png",
         liveLink: "https://restaurant-project-virid.vercel.app",
-        repoLink: "#"
+        repoLink: "https://github.com/Ashiqur2812/my-portfolio"
     },
     {
         id: 3,

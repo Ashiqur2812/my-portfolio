@@ -65,7 +65,7 @@ const Hero = () => {
                             />
                         </motion.a>
                         <motion.a
-                            href="https://linkedin.com"
+                            href="https://www.linkedin.com/in/muhammadashiqurrahman"
                             target="_blank"
                             rel="noopener noreferrer"
                             whileHover={{ scale: 1.2, rotate: 10 }}
@@ -91,7 +91,7 @@ const Hero = () => {
                 <motion.img
                     src={image}
                     alt="Profile"
-                    className="w-48 md:w-64 rounded-full border-4 border-teal-500 shadow-2xl object-cover"
+                    className="w-48 md:w-60 rounded-full border-4 border-teal-500 shadow-2xl object-cover"
                     whileHover={{ rotate: 10, scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                 />
