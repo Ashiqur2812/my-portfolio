@@ -7,7 +7,7 @@ const projects = [
         description: "A MERN stack real estate platform with user roles, property listings, payments, and authentication.",
         image: "https://i.ibb.co.com/CK81j9wv/image.png",
         liveLink: "https://auth-moha-milon-76938.web.app",
-        repoLink: "#"
+        repoLink: "https://github.com/Ashiqur2812/real-estate-client"
     },
     {
         id: 2,
@@ -15,7 +15,7 @@ const projects = [
         description: "Food Kingdom is a comprehensive Restaurant Management website designed to enhance your dining experience and streamline restaurant operations. Built using the MERN stack, this platform offers a user-friendly interface for customers and staff alike.",
         image: "https://i.ibb.co.com/bj7XkZHy/image.png",
         liveLink: "https://restaurant-project-virid.vercel.app",
-        repoLink: "https://github.com/Ashiqur2812/my-portfolio"
+        repoLink: "https://github.com/Ashiqur2812/restaurant-management-client"
     },
     {
         id: 3,
@@ -23,7 +23,7 @@ const projects = [
         description: "A career guidance website with personalized job recommendations and profile management.",
         image: "https://i.ibb.co.com/nNd4VFzs/image.png",
         liveLink: "https://career-field.web.app",
-        repoLink: "#"
+        repoLink: "https://github.com/Ashiqur2812/career-field"
     }
 ];
 

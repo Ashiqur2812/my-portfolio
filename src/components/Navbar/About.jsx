@@ -50,7 +50,7 @@ const About = () => {
                             Hello! This is{" "}
                             <span className="text-blue-500 font-semibold">Ashiqur Rahman</span>, a passionate{" "}
                             <Typewriter
-                                text="MERN Stack Developer 🚀"
+                                text="Frontend Developer 🚀"
                                 cursorColor="#3B82F6"
                                 typeSpeed={80}
                                 deleteSpeed={50}

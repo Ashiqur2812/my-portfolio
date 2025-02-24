@@ -31,7 +31,7 @@ const Hero = () => {
                 >
                     A Passionate{" "}
                     <Typewriter
-                        text="MERN Stack Developer 🚀"
+                        text="Frontend Developer 🚀"
                         cursorColor="#0D9488"
                         typeSpeed={80}
                         deleteSpeed={50}
