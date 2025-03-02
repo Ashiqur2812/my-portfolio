@@ -4,8 +4,9 @@
 
 <!-- Animated README -->
 <h1 align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=30&pause=1000&color=F7931A&center=true&vCenter=true&width=450&lines=🚀+My+Awesome+Portfolio+🚀;Crafted+with+React+%26+Vite;TailwindCSS+💖+Framer+Motion+🔥" alt="Typing SVG">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=30&pause=1000&color=F7931A&width=450&lines=%F0%9F%9A%80+My+Awesome+Portfolio+%F0%9F%9A%80;Crafted+with+React+%26+Vite;TailwindCSS+%F0%9F%92%96+Framer+Motion+%F0%9F%94%A5" alt="Typing SVG">
 </h1>
+
 
 <p align="center">
   <img src="https://img.shields.io/badge/React-19.0.0-blue?style=for-the-badge&logo=react&logoColor=white">
