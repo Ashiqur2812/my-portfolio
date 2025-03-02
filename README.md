@@ -16,9 +16,11 @@
 
 ## **🚀 Project Overview**
 Welcome to my **personal portfolio**! 🎨✨ This project showcases my **skills, experience, and projects** in an interactive and visually stunning manner.  
-Built with **React, Vite, and TailwindCSS**, this portfolio is **super fast, responsive, and beautifully animated**.  
+Built with **React, Vite, and TailwindCSS**, this portfolio is **super fast, responsive, and beautifully animated**. 
 
-🔗 **[Live Demo](https://your-portfolio-link.com/)**  
+<p align="center"> <img src="https://i.ibb.co.com/FkNcjvZz/Screenshot-2025-03-02-224938.png" width="70%" alt="Portfolio Screenshot"> <img src="https://via.placeholder.com/800x400?text=Portfolio+Screenshot+2" width="70%" alt="Portfolio Screenshot"> </p>
+
+🔗 **[Live Demo](https://my-portfolio-two-gamma-12.vercel.app)**  
 
 ---
 
@@ -27,7 +29,6 @@ Built with **React, Vite, and TailwindCSS**, this portfolio is **super fast, res
 - 🚀 [Technologies Used](#-technologies-used)
 - ⚙️ [Installation](#️-installation)
 - 🛠️ [Usage](#-usage)
-- 📸 [Screenshots](#-screenshots)
 - 🐞 [Troubleshooting](#-troubleshooting)
 - 👥 [Contributors](#-contributors)
 - 📜 [License](#-license)
@@ -70,8 +71,7 @@ npm run dev
 Run npm run dev to start the development server.
 Open http://localhost:5173 in your browser.
 Explore the portfolio, view projects, and interact with animations.
-📸 Screenshots
-<p align="center"> <img src="https://i.ibb.co.com/FkNcjvZz/Screenshot-2025-03-02-224938.png" width="70%" alt="Portfolio Screenshot"> <img src="https://via.placeholder.com/800x400?text=Portfolio+Screenshot+2" width="70%" alt="Portfolio Screenshot"> </p>
+
 🐞 Troubleshooting
 ❌ Issue: Styles not loading properly?
 ✅ Solution: Run npm run build and then npm run preview.
