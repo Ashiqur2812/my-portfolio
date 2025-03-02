@@ -5,98 +5,121 @@ const projects = [
         id: 1,
         title: "DreamWell - Real Estate Platform",
         description: "A MERN stack real estate platform with user roles, property listings, payments, and authentication.",
-        image: "https://i.ibb.co.com/CK81j9wv/image.png",
+        image: "https://i.ibb.co/CK81j9wv/image.png",
         liveLink: "https://auth-moha-milon-76938.web.app",
         repoLink: "https://github.com/Ashiqur2812/real-estate-client"
     },
     {
         id: 2,
         title: "Food Kingdom - Restaurant Website",
-        description: "Food Kingdom is a comprehensive Restaurant Management website designed to enhance your dining experience and streamline restaurant operations. Built using the MERN stack, this platform offers a user-friendly interface for customers and staff alike.",
-        image: "https://i.ibb.co.com/bj7XkZHy/image.png",
+        description: "A feature-rich restaurant platform with real-time ordering, menu management, and dynamic UI.",
+        image: "https://i.ibb.co/bj7XkZHy/image.png",
         liveLink: "https://restaurant-project-virid.vercel.app",
         repoLink: "https://github.com/Ashiqur2812/restaurant-management-client"
     },
     {
         id: 3,
         title: "CareerField - Career Management Website",
-        description: "A career guidance website with personalized job recommendations and profile management.",
-        image: "https://i.ibb.co.com/nNd4VFzs/image.png",
+        description: "A smart career guidance platform with personalized job suggestions and resume-building tools.",
+        image: "https://i.ibb.co/nNd4VFzs/image.png",
         liveLink: "https://career-field.web.app",
         repoLink: "https://github.com/Ashiqur2812/career-field"
     }
 ];
 
-const fadeInVariants = {
-    hidden: { opacity: 0, x: -50 },
-    visible: { opacity: 1, x: 0, transition: { duration: 0.8 } }
+// Floating effect for images
+const floatVariants = {
+    hover: { y: -8, scale: 1.05, transition: { duration: 0.5, ease: "easeOut" } },
+    initial: { y: 0, scale: 1 }
 };
 
 const Projects = () => {
     return (
-        <section id="projects" className="py-16 bg-gray-100 overflow-hidden">
-            <div className="container mx-auto px-6 md:px-24 ">
-                <h2 className="text-4xl font-bold text-gray-800 text-center mb-12">
-                    My <span className="text-blue-500">Projects</span>
-                </h2>
+        <section id="projects" className="py-20 bg-gradient-to-r from-gray-900 to-gray-800 text-white">
+            <div className="container mx-auto px-6 md:px-16 lg:px-24">
 
-                <div className="flex flex-col gap-20">
-                    {projects.map((project, index) => (
+                {/* Title */}
+                <motion.h2
+                    initial={{ opacity: 0, y: -20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 1 }}
+                    className="text-5xl font-extrabold text-center mb-16 tracking-wide"
+                >
+                    My <span className="text-sky-500">Projects</span> 🚀
+                </motion.h2>
+
+                {/* Projects Grid */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+                    {projects.map((project) => (
                         <motion.div
                             key={project.id}
-                            className="w-full flex flex-col lg:flex-row items-center bg-white rounded-xl shadow-lg overflow-hidden md:h-[30rem]"
-                            whileHover={{ scale: 1.02 }}
-                            transition={{ type: "spring", stiffness: 150 }}
+                            className="relative group bg-white/10 rounded-3xl p-5 shadow-xl transition-all overflow-hidden"
+                            whileHover="hover"
+                            initial="initial"
                         >
-                            {/* Left Side: Image */}
-                            <motion.img
-                                src={project.image}
-                                alt={project.title}
-                                className="lg:w-3/5 h-full object-cover"
-                                initial={{ opacity: 0, x: index % 2 === 0 ? -100 : 100 }}
-                                animate={{ opacity: 1, x: 0 }}
-                                transition={{ duration: 0.8 }}
-                            />
+                            {/* Project Image */}
+                            <motion.div variants={floatVariants} className="relative overflow-hidden rounded-xl">
+                                <img
+                                    src={project.image}
+                                    alt={project.title}
+                                    className="w-full h-64 object-cover rounded-xl hover:scale-105 transition-transform duration-700 ease-out"
+                                />
+                                {/* Overlay Effect */}
+                                <motion.div
+                                    className="absolute inset-0 transition-all duration-500"
+                                />
+                            </motion.div>
 
-                            {/* Right Side: Project Details */}
-                            <div className="p-8 w-full lg:w-1/2 text-center lg:text-left">
+                            {/* Project Details */}
+                            <div className="p-6 text-center">
                                 <motion.h3
-                                    className="text-3xl font-semibold text-gray-800"
-                                    initial={{ opacity: 0, y: 20 }}
+                                    className="text-2xl font-semibold mb-3"
+                                    initial={{ opacity: 0, y: 10 }}
                                     animate={{ opacity: 1, y: 0 }}
-                                    transition={{ delay: 0.3 }}
+                                    transition={{ delay: 0.2 }}
                                 >
                                     {project.title}
                                 </motion.h3>
                                 <motion.p
-                                    className="mt-4 text-gray-600"
-                                    initial={{ opacity: 0, y: 20 }}
+                                    className="text-gray-300"
+                                    initial={{ opacity: 0, y: 10 }}
                                     animate={{ opacity: 1, y: 0 }}
-                                    transition={{ delay: 0.5 }}
+                                    transition={{ delay: 0.3 }}
                                 >
                                     {project.description}
                                 </motion.p>
 
-                                <div className="mt-6 flex justify-center lg:justify-start gap-4">
+                                {/* Buttons */}
+                                <div className="mt-5 flex flex-wrap justify-center gap-6">
                                     <motion.a
                                         href={project.liveLink}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition"
-                                        whileHover={{ scale: 1.1 }}
+                                        className="relative px-8 py-3 text-white text-lg font-semibold tracking-wide rounded-xl 
+                    bg-gradient-to-r from-sky-500 to-teal-500 shadow-lg
+                hover:shadow-sky-500/50 hover:-translate-y-1 transition-all   duration-300
+                    before:absolute before:inset-0 before:bg-white/20  before:opacity-0 
+                    hover:before:opacity-100 hover:scale-105"
+                                        whileTap={{ scale: 0.95 }}
                                     >
-                                        Live Demo
+                                        🚀 Live Demo
                                     </motion.a>
+
                                     <motion.a
                                         href={project.repoLink}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="px-6 py-3 border border-blue-500 text-blue-500 rounded-lg hover:bg-blue-500 hover:text-white transition"
-                                        whileHover={{ scale: 1.1 }}
+                                        className="relative px-8 py-3 border-2 border-teal-500 text-teal-500 text-lg font-semibold 
+                                tracking-wide rounded-xl bg-white shadow-lg hover:bg-teal-500 hover:text-white 
+                                transition-all duration-300 hover:-translate-y-1 hover:shadow-teal-500/50 
+                                before:absolute before:inset-0 before:bg-white/20 before:opacity-0 
+                                hover:before:opacity-100 hover:scale-105"
+                                        whileTap={{ scale: 0.95 }}
                                     >
-                                        GitHub
+                                        🛠️ GitHub
                                     </motion.a>
                                 </div>
+
                             </div>
                         </motion.div>
                     ))}

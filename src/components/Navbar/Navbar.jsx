@@ -1,109 +1,87 @@
-import { useState, useEffect } from "react";
-import { Link } from "react-scroll";
+import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import logo from "../../assets/logo.webp";
+import { Link } from "react-scroll";
+import { FaBars, FaTimes } from "react-icons/fa";
+import image from '../../assets/logo.webp';
 
 const Navbar = () => {
-    const [isOpen, setIsOpen] = useState(false);
-    const [scrolling, setScrolling] = useState(true);
+    const [menuOpen, setMenuOpen] = useState(false);
 
-    // useEffect(() => {
-    //     const handleScroll = () => {
-    //         setScrolling(window.scrollY > 50);
-    //     };
-    //     window.addEventListener("scroll", handleScroll);
-    //     return () => window.removeEventListener("scroll", handleScroll);
-    // }, []);
-
-    const handleScroll = (e) => {
-        setScrolling(e.target.documentElement.scrollTop > 50);
-    };
+    const navLinks = ["Home", "About", "Skills", "Projects", "Contact"];
 
     return (
         <motion.nav
-            className={`fixed w-full z-10 transition-all duration-300 ${scrolling ? "bg-white bg-opacity-20 backdrop-blur-[6px]" : "bg-gray-900 text-white"}`}
-            initial={{ y: -100 }}
-            animate={{ y: 0 }}
-            onScroll={handleScroll}
+            className={`fixed top-0 left-0 w-full px-6 lg:px-12 py-4 lg:py-4 flex justify-between items-center z-50 transition-all duration-500 
+       bg-gradient-to-r from-gray-900 to-gray-800  text-white backdrop-blur-md bg-opacity-90 `}
+            initial={{ opacity: 0, y: -50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
         >
-            <div className="container mx-auto px-6 md:px-12 py-6 flex justify-between items-center">
-                <div className="text-2xl flex items-center gap-x-2 font-bold">
-                    <motion.img
-                        className="rounded-sm cursor-pointer"
-                        width={60}
-                        height={60}
-                        src={logo}
-                        alt="logo"
-                        whileHover={{ rotate: 360, scale: 1.1 }}
-                        transition={{ duration: 0.6 }}
-                    />
-                    <Link to="home" smooth={true} duration={500} className="cursor-pointer">
-                        Ashiqur Rahman’s Portfolio
-                    </Link>
-                </div>
+            {/* Logo */}
+            <motion.div
+                className="text-3xl flex items-center font-bold tracking-wide cursor-pointer select-none"
+                whileHover={{ scale: 1.1 }}
+                transition={{ duration: 0.3 }}
+            >
+                <img
+                    className="mr-4 rounded-lg hover:animate-spin"
+                    height={60}
+                    width={60}
+                    src={image}
+                    alt="Logo"
+                />
+                <Link to="home" smooth duration={500}>
+                    <span className="bg-gradient-to-r from-sky-500 to-pink-500 bg-clip-text text-transparent">
+                        Ashiqur Rahman
+                    </span>
+                </Link>
+            </motion.div>
 
-                {/* Desktop Links */}
-                <div className="hidden md:flex space-x-6">
-                    {['about', 'skills', 'projects', 'contact'].map((item) => (
-                        <motion.div key={item} whileHover={{ scale: 1.1 }}>
-                            <Link
-                                to={item}
-                                smooth={true}
-                                duration={500}
-                                className="hover:text-slate-500 cursor-pointer"
-                            >
-                                {item.charAt(0).toUpperCase() + item.slice(1)}
-                            </Link>
-                        </motion.div>
-                    ))}
-                </div>
-
-                {/* Mobile Hamburger Icon */}
-                <div className="md:hidden">
-                    <motion.button
-                        onClick={() => setIsOpen(!isOpen)}
-                        className="focus:outline-none"
-                        whileTap={{ scale: 0.9 }}
+            {/* Desktop Menu */}
+            <ul className="hidden md:flex space-x-8 text-lg">
+                {navLinks.map((item, index) => (
+                    <motion.li
+                        key={index}
+                        className="relative group cursor-pointer hover:text-pink-500 transition duration-300"
+                        whileHover={{ scale: 1.1 }}
                     >
-                        <motion.svg
-                            className="w-6 h-6"
-                            fill="none"
-                            stroke="currentColor"
-                            strokeWidth="2"
-                            viewBox="0 0 24 24"
-                            animate={{ rotate: isOpen ? 180 : 0 }}
-                        >
-                            {isOpen ? (
-                                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-                            ) : (
-                                <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-                            )}
-                        </motion.svg>
-                    </motion.button>
-                </div>
-            </div>
+                        <Link to={item.toLowerCase()} smooth duration={500}>
+                            {item}
+                        </Link>
+                        <span className="absolute left-0 bottom-0 h-0.5 bg-gradient-to-r from-pink-500 to-purple-500 w-0 group-hover:w-full transition-all duration-300"></span>
+                    </motion.li>
+                ))}
+            </ul>
 
-            {/* Mobile Dropdown Menu */}
+            {/* Mobile Menu Button */}
+            <button
+                onClick={() => setMenuOpen(!menuOpen)}
+                className="md:hidden text-2xl"
+            >
+                {menuOpen ? <FaTimes /> : <FaBars />}
+            </button>
+
+            {/* Mobile Menu */}
             <AnimatePresence>
-                {isOpen && (
+                {menuOpen && (
                     <motion.div
-                        className="md:hidden bg-gray-800 text-white text-center py-4"
+                        className={`absolute top-16 left-0 w-full bg-gradient-to-br from-gray-900 to-black text-white shadow-lg p-5 flex flex-col items-center space-y-4 text-lg md:hidden rounded-xl`}
                         initial={{ opacity: 0, y: -10 }}
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -10 }}
-                        transition={{ duration: 0.3 }}
+                        transition={{ duration: 0.5 }}
                     >
-                        {['about', 'skills', 'projects', 'contact'].map((item) => (
-                            <Link
-                                key={item}
-                                to={item}
-                                smooth={true}
-                                duration={500}
-                                className="block py-2 hover:text-gray-400 cursor-pointer"
-                                onClick={() => setIsOpen(false)}
+                        {navLinks.map((item, index) => (
+                            <motion.a
+                                key={index}
+                                className="cursor-pointer hover:text-pink-500 transition duration-300"
+                                whileHover={{ scale: 1.1 }}
+                                onClick={() => setMenuOpen(false)}
                             >
-                                {item.charAt(0).toUpperCase() + item.slice(1)}
-                            </Link>
+                                <Link to={item.toLowerCase()} smooth duration={500}>
+                                    {item}
+                                </Link>
+                            </motion.a>
                         ))}
                     </motion.div>
                 )}

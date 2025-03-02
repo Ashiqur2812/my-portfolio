@@ -4,8 +4,8 @@ import { SiTailwindcss, SiJavascript, SiMongodb, SiFirebase, SiExpress } from "r
 
 const skills = [
     { name: "HTML", icon: FaHtml5, color: "from-red-500 to-orange-500" },
-    { name: "CSS", icon: FaCss3Alt, color: "from-blue-500 to-blue-700" },
-    { name: "Tailwind", icon: SiTailwindcss, color: "from-blue-500 to-cyan-500" },
+    { name: "CSS", icon: FaCss3Alt, color: "from-sky-500 to-sky-700" },
+    { name: "Tailwind", icon: SiTailwindcss, color: "from-sky-500 to-cyan-500" },
     { name: "JavaScript", icon: SiJavascript, color: "from-yellow-300 to-yellow-400" },
     { name: "React", icon: FaReact, color: "from-sky-400 to-sky-500" },
     { name: "Firebase", icon: SiFirebase, color: "from-yellow-500 to-orange-400" },
@@ -21,13 +21,13 @@ const floatingAnimations = [
 
 const Skills = () => {
     return (
-        <section id="skills" className="py-16 bg-white text-black">
+        <section id="skills" className="py-16 md:pb-40 md:pt-20 bg-gradient-to-r from-gray-900 to-gray-800 text-white">
             <div className="container mx-auto px-6 md:px-12 text-center">
-                <h2 className="text-4xl font-bold mb-12">
-                    My <span className="text-blue-500">Skills</span>
+                <h2 className="text-4xl md:text-5xl font-bold mb-12 lg:mb-28">
+                    My <span className="text-sky-500">Skills</span>
                 </h2>
 
-                <div className="flex flex-wrap justify-center gap-6">
+                <div className="flex flex-wrap justify-center gap-6 lg:mb-32">
                     {skills.map((skill, index) => (
                         <motion.div
                             key={index}
