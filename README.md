@@ -1,5 +1,7 @@
 # My Portfolio
 
+<p align="center"> <img src="https://media.giphy.com/media/26AHONQ79FdWZhAI0/giphy.gif" width="200"> </p> ```
+
 <!-- Animated README -->
 <h1 align="center">
   <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=30&pause=1000&color=F7931A&center=true&vCenter=true&width=450&lines=🚀+My+Awesome+Portfolio+🚀;Crafted+with+React+%26+Vite;TailwindCSS+💖+Framer+Motion+🔥" alt="Typing SVG">
@@ -18,7 +20,7 @@
 Welcome to my **personal portfolio**! 🎨✨ This project showcases my **skills, experience, and projects** in an interactive and visually stunning manner.  
 Built with **React, Vite, and TailwindCSS**, this portfolio is **super fast, responsive, and beautifully animated**. 
 
-<p align="center"> <img src="https://i.ibb.co.com/FkNcjvZz/Screenshot-2025-03-02-224938.png" width="70%" alt="Portfolio Screenshot"> <img src="https://via.placeholder.com/800x400?text=Portfolio+Screenshot+2" width="70%" alt="Portfolio Screenshot"> </p>
+<p align="center"> <img src="https://i.ibb.co.com/FkNcjvZz/Screenshot-2025-03-02-224938.png" width="70%"> </p>
 
 🔗 **[Live Demo](https://my-portfolio-two-gamma-12.vercel.app)**  
 
@@ -90,4 +92,4 @@ Explore the portfolio, view projects, and interact with animations.
 💖 Support & Star 🌟
 If you like this project, don't forget to star ⭐ the repository!
 
-<p align="center"> <img src="https://media.giphy.com/media/26AHONQ79FdWZhAI0/giphy.gif" width="200"> </p> ```
+
