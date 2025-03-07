@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import image from "../../assets/Firefly 20250210155735.png"; 
-import pdf from "../../assets/Resume_04.pdf";
+import pdf from "../../assets/Ashiqur's_Resume.pdf";
 import Typewriter from "react-typewriter-effect";
 
 const Hero = () => {
