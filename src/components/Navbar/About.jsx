@@ -62,6 +62,7 @@ const About = () => {
                                 typeSpeed={80}
                                 deleteSpeed={50}
                                 delay={1000}
+                                loop={0}
                             />{" "}
                             who fell in love with coding while exploring the endless possibilities of the web. My journey hasn't been easy, but every challenge has shaped me into the developer I am today.
                         </p>
@@ -69,11 +70,14 @@ const About = () => {
                             I started with zero knowledge, spending countless nights debugging code, watching tutorials, and reading documentation. Over time, I mastered{" "}
                             <span className="text-teal-400 font-semibold">React.js</span>,{" "}
                             <span className="text-teal-400 font-semibold">Tailwind CSS</span>, and{" "}
-                            <span className="text-teal-400 font-semibold">JavaScript</span>, and now I take pride in building clean, efficient, and responsive user interfaces. My mantra is simple:{" "}
-                            <span className="text-teal-400 font-semibold">"Keep learning, keep building."</span> 💻
+                            <span className="text-teal-400 font-semibold">JavaScript</span>, and now I take pride in building clean, efficient, and responsive user interfaces. My goal is simple:{" "}
+                            <span className="text-teal-400 font-semibold">"Crafting pixels with purpose, breathing life into code,
+                                Where React weaves magic, and smooth UIs unfold.
+                                From concept to creation, every line I refine,
+Building the future, one component at a time."</span> 💻
                         </p>
                         <p className="mt-6 text-lg md:text-xl text-gray-300 leading-relaxed">
-                            What drives me is my <span className="text-teal-400 font-semibold">curiosity</span> and <span className="text-teal-400 font-semibold">dedication</span>. I'm always eager to learn new technologies and improve my skills. In my free time, you'll find me browsing YouTube for the latest tech trends, experimenting with new tools, or contributing to open-source projects. I believe in sharing knowledge, so I often write blogs and create tutorials to help others in the community.
+                            What drives me is my <span className="text-teal-400 font-semibold">curiosity</span> and <span className="text-teal-400 font-semibold">dedication</span>. I'm always eager to learn new technologies and improve my skills. In my free time, you'll find me browsing YouTube for the latest tech trends, experimenting with new tools, or contributing to open-source projects.
                         </p>
                         <p className="mt-6 text-lg md:text-xl text-gray-300 leading-relaxed">
                             Beyond coding, I have a deep interest in <span className="text-teal-400 font-semibold">exploring the truth of the Quran and Hadith</span>. I spend time reading religious books and sharing their teachings with others. This not only keeps me grounded but also inspires me to approach life with patience, humility, and a problem-solving mindset.

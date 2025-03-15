@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import image from "../../assets/Firefly 20250210155735.png"; 
-import pdf from "../../assets/Ashiqur's_Resume.pdf";
+import pdf from "../../assets/resume_of_ashiq.pdf";
 import Typewriter from "react-typewriter-effect";
 
 const Hero = () => {
@@ -51,7 +51,7 @@ const Hero = () => {
                         📜 Download Resume
                     </motion.a>
                     <div className="flex gap-3 md:pt-8 pb-12">
-                        <motion.a
+                        {/* <motion.a
                             href="https://github.com/ashiqur2812"
                             target="_blank"
                             rel="noopener noreferrer"
@@ -63,8 +63,8 @@ const Hero = () => {
                                 alt="GitHub"
                                 className="w-6 sm:w-8"
                             />
-                        </motion.a>
-                        <motion.a
+                        </motion.a> */}
+                        {/* <motion.a
                             href="https://www.linkedin.com/in/muhammadashiqurrahman"
                             target="_blank"
                             rel="noopener noreferrer"
@@ -76,7 +76,7 @@ const Hero = () => {
                                 alt="LinkedIn"
                                 className="w-6 sm:w-8"
                             />
-                        </motion.a>
+                        </motion.a> */}
                     </div>
                 </div>
             </motion.div>

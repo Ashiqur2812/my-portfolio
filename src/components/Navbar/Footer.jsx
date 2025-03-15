@@ -12,8 +12,6 @@ const Footer = () => {
 
   return (
     <footer className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white py-6 overflow-hidden">
-      {/* Floating Glassmorphism Background */}
-      {/* <div className="absolute inset-0 bg-white/5 backdrop-blur-lg rounded-t-lg w-full h-full transform -skew-y-3"></div> */}
 
       {/* Floating Particles Animation */}
       <div className="absolute inset-0 overflow-hidden">
